@@ -1,0 +1,10 @@
+- Z Feng*, J Zhang, L Katafygiotis, X Hua, Z Chen. Bayesian Spectral Decomposition for Efficient Modal Identification using Ambient Vibration. Structural Control and Health Monitoring, 2024: 5137641.
+- Z Feng, J Zhang*, X Xuan, Y Wang, X Hua, Z Chen, W Yan. Bayesian Time Domain Approach for Damping Identification and Uncertainty Quantification in Stay Cables Using Free Vibration Response. Engineering Structures, 2024, 315:118477.
+- H Jing, Z Feng*, Z Chen, G Huang, X Hua, Z Chen, T Wan. Analytical Solutions for Static Longitudinal Displacements of Suspension Bridges Under a Moving Vertical Concentrated Load. Engineering Structures, 2024, 320: 118871.
+- H Jing, Z Feng*, Z Chen, X Hua, Z Chen, T Wan. Enhancing Longitudinal Performance in Railway Suspension Bridges Through an Integrated Cable Restrainer System. Structures, 2024, 62:106769.
+- C Wu, H Jing, Z Feng*, J Song, T Wan, Z Chen. Control of Longitudinal Movement Response of Suspension Bridges induced by Passing Trains Using Low-exponent Fluid Viscous Dampers. Structures, 2024, 62:106330.
+- Z Feng, H Jing*, Q Wu, Y Li, X Hua. Performance evaluation of inerter-based dampers for bridge flutter control: a comparative study. International Journal of Structural Stability and Dynamics, 2024: 2450058.
+- C Wang, X Hua, Z Feng*, H Xiao, Z Chen, J Zhang. Experimental investigation on vortex-induced vibrations of a triple-box girder with web modification, Journal of Wind Engineering and Industrial Aerodynamics, 2021, 218: 104783.
+- W. Shen, A. Niyitangamahoro, Z. Feng*, H. Zhu. Tuned Inerter Dampers for Civil Structures Subjected to Earthquake Ground Motions：Optimum Design and Seismic Performance, Engineering Structures, 2019, 198: 109470.
+- ZQ Feng*, B Zhao, XG Hua, ZQ Chen. Enhanced EMD-RDT method for output-only ambient modal identification of structures. Journal of Aerospace Engineering, 2019, 32(4): 04019046.
+- Z Feng, W Shen*, Z Chen. Consistent Multilevel RDT-ERA for Output-Only Ambient Modal Identification of Structures, International Journal of Structural Stability and Dynamics, 2017, 17(9): 1750106.
