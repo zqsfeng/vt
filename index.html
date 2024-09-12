@@ -9,7 +9,7 @@
     <title>Vibrant Team</title>
 
     <!-- 网站图标 -->
-    <link rel="icon" type="image/x-icon" href="/vt/static/assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
 
     <!-- Bootstrap 图标库 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
@@ -20,10 +20,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700&display=swap" rel="stylesheet" />
 
     <!-- 核心主题 CSS（包括 Bootstrap）-->
-    <link href="/vt/static/css/styles.css" rel="stylesheet" />
-    <link href="/vt/static/css/main.css" rel="stylesheet" />
+    <link href="static/css/styles.css" rel="stylesheet" />
+    <link href="static/css/main.css" rel="stylesheet" />
 
     <style>
+        /* 顶部背景图设置 */
+        .top-section {
+            background-image: url('static/assets/img/background.jpeg');
+            height: 300px; /* 你可以根据需要调整高度 */
+            background-size: cover;
+            background-position: center;
+        }
+
         /* 为每个 section 设置交替背景色 */
         section:nth-child(even) {
             background-color: #f7f7f7; /* 灰色背景 */
@@ -33,27 +41,57 @@
             background-color: #ffffff; /* 白色背景 */
         }
 
-        /* 保证文字颜色在灰色背景上可读 */
+        /* 两端对齐文本 */
+        p {
+            text-align: justify;
+        }
+
         section {
             padding: 50px 0;
         }
 
-        /* 正文文本两端对齐 */
-        p, ul, li {
-            text-align: justify;
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
         }
     </style>
 
     <!-- Bootstrap 核心 JS -->
-    <script src="/vt/static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
 
+    <!-- JavaScript for toggling sections -->
+    <script>
+        function showSection(sectionId) {
+            // 隐藏所有 section
+            const sections = document.querySelectorAll("section.content-section");
+            sections.forEach(section => {
+                section.classList.add("hidden");
+                section.classList.remove("visible");
+            });
+
+            // 显示选中的 section
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.remove("hidden");
+                activeSection.classList.add("visible");
+            }
+        }
+
+        // 页面加载时显示 about 部分
+        window.onload = function() {
+            showSection('about-section');
+        };
+    </script>
 </head>
 
 <body id="page-top">
-    <!-- 顶部图片部分 -->
-    <section class="top-section" style="background-image: url('/vt/static/assets/img/background.jpeg'); height: 500px; background-size: cover; background-position: center;">
+    <!-- 顶部背景图片部分，始终显示 -->
+    <section class="top-section">
+        <!-- 背景图片 -->
     </section>
-    <!-- 顶部图片部分结束 -->
 
     <!-- 导航栏 -->
     <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
@@ -67,24 +105,25 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#about">About</a>
+                        <a class="nav-link me-lg-3" href="#" onclick="showSection('about-section')">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#blog">Blog</a>
+                        <a class="nav-link me-lg-3" href="#" onclick="showSection('blog-section')">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications">Publications</a>
+                        <a class="nav-link me-lg-3" href="#" onclick="showSection('publications-section')">Publications</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#deliverables">Deliverables</a>
+                        <a class="nav-link me-lg-3" href="#" onclick="showSection('deliverables-section')">Deliverables</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- 内容部分，使用 content-section 类，确保仅切换内容部分 -->
     <!-- About 部分 -->
-    <section id="about" class="mt-5">
+    <section id="about-section" class="content-section hidden">
         <div class="container px-5">
             <header>
                 <h2>About</h2>
@@ -114,7 +153,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <!-- 负责人照片 -->
-                            <img src="/vt/static/assets/img/photo.png" alt="Principal Investigator Photo" style="width: 100%; height: auto;" />
+                            <img src="static/assets/img/photo.png" alt="Principal Investigator Photo" style="width: 100%; height: auto;" />
                         </div>
                         <div class="col-md-9">
                             <p>
@@ -162,7 +201,7 @@
     </section>
 
     <!-- Blog 部分 -->
-    <section id="blog" class="mt-5">
+    <section id="blog-section" class="content-section hidden">
         <div class="container px-5">
             <header>
                 <h2>Blog</h2>
@@ -172,7 +211,7 @@
     </section>
 
     <!-- Publications 部分 -->
-    <section id="publications" class="mt-5">
+    <section id="publications-section" class="content-section hidden">
         <div class="container px-5">
             <header>
                 <h2>Publications</h2>
@@ -207,7 +246,7 @@
     </section>
 
     <!-- Deliverables 部分 -->
-    <section id="deliverables" class="mt-5">
+    <section id="deliverables-section" class="content-section hidden">
         <div class="container px-5">
             <header>
                 <h2>Deliverables</h2>
