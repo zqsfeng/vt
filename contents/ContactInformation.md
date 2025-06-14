@@ -1,5 +1,5 @@
 <!-- # Contact Information-->
-Email: zqfeng(AT)hnu.edu.cn; zqfeng(AT)outlook.com
+Email: zqfeng\@hnu.edu.cn; zqfeng\@outlook.com
 
 
 
